@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { connect } from 'react-redux';
 import * as actions from '../../store/actions/auth';
-import Icon from '@material-ui/core/Icon';
 import {
 	Grid,
 	Container,
@@ -20,7 +19,6 @@ import './styles.css';
 
 const Login = (props) => {
 
-	const [code, setCode] = useState('');
 
 	const { register, handleSubmit, errors, watch } = useForm();
 	const watchFields = watch(['username', 'password']);
@@ -28,7 +26,6 @@ const Login = (props) => {
 
 	const handleSuccess = (data) => {
 		console.log('this is data in handlesuccess: ', data);
-		// setCode(data.code)
 		props.login('loginLinkedin', data.code, '', '')
 	}
 

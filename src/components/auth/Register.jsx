@@ -30,12 +30,8 @@ const Register = (props) => {
 		'city',
 	]);
 
-	const [code, setCode] = useState('');
-
-
 	const handleSuccess = (data) => {
 		console.log('this is data in handlesuccess: ', data);
-		setCode(data.code)
 	}
 
 	const submitRegisterForm = async (formData) => {
