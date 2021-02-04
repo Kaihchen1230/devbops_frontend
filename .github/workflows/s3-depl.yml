@@ -21,6 +21,6 @@ jobs:
       - name: Run test
         run: npm run test-once
       - name: Build Application
-        run: npm build
+        run: npm run build
       - name: Deploy app build to S3 bucket
-        run: aws s3 sync ./build/ s3://devbops.com --delete
+        run: aws s3 sync ./build/ s3://devbops.com
