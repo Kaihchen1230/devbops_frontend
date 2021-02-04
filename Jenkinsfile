@@ -3,30 +3,25 @@ pipeline {
 
     stages {
 
-        stage('git checkout'){
+        stage('Git checkout'){
             steps {
                 git credentialsId: 'kai-github', url: 'https://github.com/Kaihchen1230/devbops_frontend'
             }
         }
 
-        stage('vertify repo existed') {
+        stage('Build') {
             steps {
-                sh 'ls -a'
+                echo "installing required packages" 
+                sh 'npm ci'
             }
         }
-        // stage('Build') {
-        //     steps {
-        //        echo "installing required packages" 
-        //        sh 'npm ci'
-        //     }
 
-        // }
-        // stage('Test') {
-        //     steps {
-        //         echo "in the test stage"
-        //         sh 'npm run test-once'
-        //     }
-        // }
+        stage('Test') {
+            steps {
+                echo "in the test stage"
+                sh 'npm run test-once'
+            }
+        }
 
     }
 }
