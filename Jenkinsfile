@@ -1,6 +1,5 @@
 pipeline {
     agent any
-    tools {nodejs "npm"}
     
     stages {
 
@@ -13,8 +12,6 @@ pipeline {
         stage('Build') {
             steps {
                 echo "installing required packages" 
-                sh 'rm -rf node_modules'
-                // sh 'npm cache clean'
                 sh 'npm install'
             }
         }
