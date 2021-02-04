@@ -13,7 +13,7 @@ pipeline {
         stage('Build') {
             steps {
                 echo "installing required packages" 
-                sh 'npm ci'
+                sh 'npm install'
             }
         }
 
