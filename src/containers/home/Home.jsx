@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { Redirect } from 'react-router-dom';
 import {
 	Container,
 	Grid,
@@ -21,7 +20,6 @@ import { connect } from 'react-redux';
 
 import SlideShow from '../../components/UI/slideShow/SlideShow';
 import DialogWindow from '../../components/UI/dialogWindow/DialogWindow';
-import Main from '../main/Main';
 
 const Home = (props) => {
 	const [openAuth, setOpenAuth] = useState(false);
@@ -34,7 +32,7 @@ const Home = (props) => {
 	useEffect(() => {
 		props.fetchEvents();
 		props.fetchBlogs();
-	}, []);
+	}, [props]);
 
 	const handleClose = () => {
 		setOpenAuth(false);
