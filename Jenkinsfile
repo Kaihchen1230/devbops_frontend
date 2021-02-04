@@ -23,6 +23,13 @@ pipeline {
             }
         }
 
+        stage('Build Application') {
+            steps {
+                echo "in the build stage"
+                sh 'npm run build'
+            }
+        }
+
         stage('Connect to AWS S3') {
             steps {
                 withCredentials([[$class: 'AmazonWebServicesCredentialsBinding', accessKeyVariable: 'AWS_ACCESS_KEY_ID', credentialsId: 'aws-cli-configure', secretKeyVariable: 'AWS_SECRET_ACCESS_KEY']]) {
