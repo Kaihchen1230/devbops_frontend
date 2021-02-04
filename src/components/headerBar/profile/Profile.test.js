@@ -19,7 +19,7 @@ describe('Profile Component', () => {
 	it('Should render PorfileComponent without error', () => {
 		const wrapper = findByTestAtrr(component, 'profile-component');
 
-		expect(wrapper.length).toBe(2);
+		expect(wrapper.length).toBe(1);
 	});
 
 	it('Should render the accountIcon', () => {
