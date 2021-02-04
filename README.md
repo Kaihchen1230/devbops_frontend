@@ -15,8 +15,3 @@
 - create your own branch if want to update: `git checkout -b <name-of-your-branch>`
 - run `npm install` to install all required packages
 - run `npm start` to start the development environment
-
-## Production Environment
-
-- create the docker image based on the docker file: `docker image build -f Dockerfile.prod -t devbops:prod .`
-- run the container: `sudo docker run -d -p 3000:80/tcp devbops:prod`
