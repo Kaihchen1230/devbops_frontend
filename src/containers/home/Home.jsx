@@ -32,7 +32,8 @@ const Home = (props) => {
 	useEffect(() => {
 		props.fetchEvents();
 		props.fetchBlogs();
-	}, [props]);
+		// eslint-disable-next-line react-hooks/exhaustive-deps
+	}, []);
 
 	const handleClose = () => {
 		setOpenAuth(false);

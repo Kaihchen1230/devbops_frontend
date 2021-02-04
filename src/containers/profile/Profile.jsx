@@ -17,7 +17,8 @@ const Profile = (props) => {
 		props.fetchEvents(props.token, 'VH');
 		props.fetchEvents(props.token, 'H');
 		props.fetchBlogs(props.token);
-	}, [props]);
+		// eslint-disable-next-line react-hooks/exhaustive-deps
+	}, []);
 
 	console.log('props.token: ', props.token)
 	if (props.token === null) {
