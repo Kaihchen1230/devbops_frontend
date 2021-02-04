@@ -11,7 +11,7 @@ pipeline {
 
         stage('vertify repo existed') {
             steps {
-                sh ls -a
+                sh 'ls -a'
             }
         }
         // stage('Build') {
