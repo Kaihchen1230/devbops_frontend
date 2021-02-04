@@ -14,7 +14,7 @@ pipeline {
             steps {
                 echo "installing required packages" 
                 sh 'rm -rf node_modules'
-                sh 'npm cache clean'
+                // sh 'npm cache clean'
                 sh 'npm install'
             }
         }
