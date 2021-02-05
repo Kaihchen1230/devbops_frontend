@@ -19,7 +19,7 @@ describe('Logo Area Component', () => {
 	it('Should render LogoArea component without error', () => {
 		const wrapper = findByTestAtrr(component, 'logo-component');
 
-		expect(wrapper.length).toBe(2);
+		expect(wrapper.length).toBe(1);
 	});
 
 	it('Should render the logo', () => {
